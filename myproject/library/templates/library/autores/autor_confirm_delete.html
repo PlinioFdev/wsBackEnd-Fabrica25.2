@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>Confirmar exclusão</title></head>
+<body>
+  <h1>Excluir Autor</h1>
+  <p>Tem certeza que deseja excluir "{{ object.nome }}"?</p>
+  <form method="post">{% csrf_token %}<button type="submit">Sim, excluir</button></form>
+  <p><a href="{% url 'autor-list' %}">Cancelar</a></p>
+</body>
+</html>

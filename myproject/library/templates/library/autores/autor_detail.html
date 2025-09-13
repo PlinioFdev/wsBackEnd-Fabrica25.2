@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="utf-8"><title>{{ object.nome }}</title></head>
+<body>
+  <h1>{{ object.nome }}</h1>
+  <p>Email: {{ object.email }}</p>
+  <p><a href="{% url 'autor-update' object.pk %}">Editar</a> | <a href="{% url 'autor-list' %}">Voltar</a></p>
+</body>
+</html>

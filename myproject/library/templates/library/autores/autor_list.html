@@ -1,0 +1,20 @@
+<!-- library/templates/library/autores/autor_list.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Autores</title>
+</head>
+<body>
+    <h1>Autores</h1>
+    <ul>
+        {% for autor in object_list %}
+            <li>{{ autor.nome }} - {{ autor.email }}</li>
+        {% empty %}
+            <li>Nenhum autor cadastrado.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'autor-criar' %}">+ Adicionar Autor</a>
+</body>
+</html>
